@@ -1,0 +1,170 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+*{margin:0;padding:0;}
+
+body{
+  background:rgb(134, 165, 233);
+}
+
+.button{
+  width:100px;
+  background:#3399cc;
+  display:block;
+  margin:0 auto;
+  margin-top:1%;
+  padding:10px;
+  padding-right:20px;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+.button:hover{
+  background:#2288bb;
+}
+
+.icons{
+  width: 20px;
+  height: 20px;
+  margin-left: 100px;
+}
+
+#head{
+  padding-left: 55px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#footer {
+  background-color: rgb(0, 0, 0);
+  color: seashell;
+  font-size: 20px;
+  padding: 30px;
+  /*margin-top: 20px;*/
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+}
+
+#login{
+  width: 400px;
+  margin:0 auto;
+  margin-top:8px;
+  margin-bottom:3%;
+  transition:opacity 1s;
+  -webkit-transition:opacity 1s;
+}
+
+#register{
+  width: 400px;
+  margin:0 auto;
+  margin-top:8px;
+  margin-bottom:3%;
+  transition:opacity 1s;
+  -webkit-transition:opacity 1s;
+}
+
+input[name="benutzer"],input[name="name"],input[type="password"]{
+  width:100%;
+  background:#fff;
+  margin-bottom:4%;
+  border:1px solid #ccc;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:95%;
+  color:#555;
+}
+
+input[type="submit"]{
+  width:100%;
+  background:#3399cc;
+  border:0;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+input[type="submit"]:hover{
+  background:#2288bb;
+}
+
+#head{
+  padding-left: 55px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  background-color: rgb(0, 0, 0);
+  color: snow;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin-bottom: 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav-decoration{
+  float: left;
+}
+
+.formularlist_page {
+  display: block;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.formular_page {
+  display: block;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-left: 40px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contact_page {
+  display: block;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-left: 0px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div#cont1 {
+  background-color: darkgray;
+  padding-bottom: 20px;
+}
+
+.geschlecht {
+  padding-left: 1px;
+}
+
+.fci{
+  margin-left: 1px;
+}
