@@ -3,7 +3,7 @@
 require 'getdbconnection.php';
 
 session_start();
-$conn = getDbConnection();
+$conn = getMyDbConnection();
 
 $name = $_POST['name'];
 $pass = $_POST['password'];

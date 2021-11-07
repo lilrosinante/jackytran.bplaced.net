@@ -6,8 +6,24 @@ body{
   background:rgb(134, 165, 233);
 }
 
-.button{
+.login_button{
   width:100px;
+  background:#3399cc;
+  display:block;
+  margin:0 auto;
+  margin-top:1%;
+  padding:10px;
+  padding-right:20px;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+#btn_pay{
+  width:200px;
   background:#3399cc;
   display:block;
   margin:0 auto;
@@ -165,6 +181,13 @@ div#cont1 {
   padding-left: 1px;
 }
 
-.fci{
+.fci {
   margin-left: 1px;
+}
+
+.buyButton {
+  width: 60px;
+  border: none;
+  background-color: #3399cc;
+  color: white;
 }

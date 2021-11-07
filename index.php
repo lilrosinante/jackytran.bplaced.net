@@ -15,7 +15,7 @@
 
 <img src="/view/img/bookshelf.jpg" alt="first" width="1904">
 
-<span href="#" class="button" id="toggle-login"><h1>Log in</h1></span>
+<span href="#" class="button login_button" id="toggle-login"><h1>Log in</h1></span>
 
 <div id="login">
     <form action="/controller/login.php" method="post">

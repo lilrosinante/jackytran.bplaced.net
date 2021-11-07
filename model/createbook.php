@@ -26,7 +26,7 @@ require 'getdbconnection.php';
         $content = isset($_POST['book_content']) ? $_POST['book_content'] : '';
         $published_at = isset($_POST['book_published_at']) ? $_POST['book_published_at'] : '';
 
-        $conn = getDbConnection();
+        $conn = getMyDbConnection();
 
         $sql = "INSERT INTO formular
           (vorname, nachname, title,  published_at, content, strasse_hausnummer, plz, geschlecht)

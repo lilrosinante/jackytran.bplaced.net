@@ -2,8 +2,7 @@
 session_start();
 if (!isset($_SESSION['logged_in'])) {
     header('location:/index.php');
-}
-?>
+} ?>
 
 <html lang="en">
 
@@ -21,7 +20,7 @@ if (!isset($_SESSION['logged_in'])) {
 <script src="js/index.js"></script>
 
 <header>
-    <h2 id="head">Skør Book Office 🧾</h2>
+    <h2 id="head">Jacky's Book Shop 🧾</h2>
 </header>
 <ul class="nav-bar">
     <li class="nav-decoration"><a class="formular_page" href="../model/createbook.php">Add Book</a></li>
@@ -29,6 +28,8 @@ if (!isset($_SESSION['logged_in'])) {
     <li class="nav-decoration"><a class="formularlist_page" href="../model/booklist.php">Book List</a></li>
 
     <li class="nav-decoration"><a class="contact_page" href="../view/mailformular.php">Contact Us</a></li>
+
+    <li class="nav-decoration"><a class="contact_page" href="../model/payment.php">Pay</a></li>
 
     <li class="nav-decoration"><a class="contact_page" href="../controller/logout.php">Log Out</a></li>
 </ul>

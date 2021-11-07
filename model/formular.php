@@ -3,14 +3,15 @@ require '../view/header.php';
 
 require 'getdbconnection.php';
 
-$conn = getDbConnection();
+$conn = getMyDbConnection();
 
 $formular = null;
+$id = isset($_GET['id']) ? $_GET['id'] : '';
 
-if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+if (isset($id) && is_numeric($id)) {
     $sql = "SELECT *             
             FROM formular             
-            WHERE id = " . $_GET['id'];
+            WHERE id = $id";
     $results = mysqli_query($conn, $sql);
 
     if (false === $results) {
@@ -23,8 +24,6 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 }
 
 ?>
-
-
 
 <div class="container" id="cont3">
 
@@ -41,6 +40,10 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         <p><?= $formular['strasse_hausnummer']; ?></p>
         <p><?= $formular['plz']; ?></p>
         <p><?= $formular['geschlecht']; ?></p>
+        <form action="/model/purchase.php" method="post">
+            <input type="hidden" name="title" value="<?= $formular['title'];?>">
+        <button class="button buyButton" type="submit"><h3>Buy</h3></button>
+        </form>
     </article> <?php endif; ?>
 </div>
 <?php require '../view/footer.php'; ?>

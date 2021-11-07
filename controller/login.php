@@ -1,11 +1,9 @@
 <?php
 
+include('../index.php');
 include '../model/getdbconnection.php';
 
-//session_set_cookie_params(0, '/', "jackytran.bplaced.net", false ,true);
-//session_start();
-//session_regenerate_id();
-$conn = getDbConnection();
+$conn = getMyDbConnection();
 
 //Daten, die in die Datenbak gesendet werden
 $name = $_POST['benutzer'];
@@ -25,9 +23,7 @@ if ($num == 1) {
     $_SESSION['benutzer'] = $name;
     header('location:/model/booklist.php');
     $_SESSION['logged_in'] = true;
-}/* else {
+} else {
     echo "Your login credentials might be wrong.";
-}*/
-
-include('../index.php');
+}
 
