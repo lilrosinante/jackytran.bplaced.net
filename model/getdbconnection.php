@@ -39,7 +39,7 @@ function getPgDbConnection(){
 
     $db_host = "localhost";
     $db_name = "jackytran_m151";
-    $db_user = "jackytran";
+    $db_user = "jackytran_2";
     $db_pass = "Jaydi2003";
 
     $pg = "host=$db_host user=$db_user password=$db_pass dbname=$db_name";

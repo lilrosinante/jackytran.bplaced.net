@@ -53,6 +53,7 @@ if (false === $results) {
     <?php if ($bookCount != 0) {?>
         <input type="submit" class="button alt" name="btn_pay" id="btn_pay" value="&nbsp; Pay &nbsp;">
     <?php } ?>
+    <br>
 </form>
 <?php require '../view/footer.php';
 ?>

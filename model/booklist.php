@@ -32,7 +32,6 @@ include 'getdbconnection.php';
             <?php foreach ($formulars as $formular) : ?>
                 <li>
                     <article>
-                        <?php $_SESSION['allowed_link_id'] = $formular['id']; ?>
                         <h2><a href="formular.php?id=<?= $formular['id']; ?>"><?= $formular['title']; ?></a></h2>
                         <p>Published: <strong><?= $formular['published']; ?></strong></p>
                         <p><?= $formular['teaser']; ?></p>

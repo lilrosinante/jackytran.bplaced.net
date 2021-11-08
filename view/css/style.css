@@ -191,3 +191,7 @@ div#cont1 {
   background-color: #3399cc;
   color: white;
 }
+
+#wrongCredentials {
+  color: #cf2c2c;
+}

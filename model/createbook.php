@@ -1,64 +1,63 @@
 <?php
-require '../view/header.php';
-
 require 'redirectAndExit.php';
 require 'getdbconnection.php';
 
-    $errors = [];
+$errors = [];
 
-    $nachname = '';
-    $vorname = '';
-    $strasse_hausnummer = '';
-    $plz = '';
-    $geschlecht = '';
-    $title = '';
-    $content = '';
-    $published_at = '';
+$nachname = '';
+$vorname = '';
+$strasse_hausnummer = '';
+$plz = '';
+$geschlecht = '';
+$title = '';
+$content = '';
+$published_at = '';
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $nachname = isset($_POST['person_nachname']) ? $_POST['person_nachname'] : '';
-        $vorname = isset($_POST['person_vorname']) ? $_POST['person_vorname'] : '';
-        $strasse_hausnummer = isset($_POST['person_strasse_und_hausnummer']) ? $_POST['person_strasse_und_hausnummer'] : '';
-        $plz = isset($_POST['person_plz']) ? $_POST['person_plz'] : '';
-        $geschlecht = isset($_POST['person_geschlecht']) ? $_POST['person_geschlecht'] : '';
-        $title = isset($_POST['book_title']) ? $_POST['book_title'] : '';
-        $content = isset($_POST['book_content']) ? $_POST['book_content'] : '';
-        $published_at = isset($_POST['book_published_at']) ? $_POST['book_published_at'] : '';
+    $nachname = isset($_POST['person_nachname']) ? $_POST['person_nachname'] : '';
+    $vorname = isset($_POST['person_vorname']) ? $_POST['person_vorname'] : '';
+    $strasse_hausnummer = isset($_POST['person_strasse_und_hausnummer']) ? $_POST['person_strasse_und_hausnummer'] : '';
+    $plz = isset($_POST['person_plz']) ? $_POST['person_plz'] : '';
+    $geschlecht = isset($_POST['person_geschlecht']) ? $_POST['person_geschlecht'] : '';
+    $title = isset($_POST['book_title']) ? $_POST['book_title'] : '';
+    $content = isset($_POST['book_content']) ? $_POST['book_content'] : '';
+    $published_at = isset($_POST['book_published_at']) ? $_POST['book_published_at'] : '';
 
-        $conn = getMyDbConnection();
+    $conn = getMyDbConnection();
 
-        $sql = "INSERT INTO formular
+    $sql = "INSERT INTO formular
           (vorname, nachname, title,  published_at, content, strasse_hausnummer, plz, geschlecht)
          VALUES
            (?, ?, ?, ?, ?, ?, ?, ?)";
 
-        $stmt = mysqli_prepare($conn, $sql);
-        if (false === $stmt) {
-            echo mysqli_error($conn);
-        } else {
-            mysqli_stmt_bind_param(
-                $stmt,
-                "ssssssis",
-                $_POST['person_vorname'],
-                $_POST['person_nachname'],
-                $_POST['book_title'],
-                $_POST['book_published_at'],
-                $_POST['book_content'],
-                $_POST['person_strasse_und_hausnummer'],
-                $_POST['person_plz'],
-                $_POST['person_geschlecht']
-            );
+    $stmt = mysqli_prepare($conn, $sql);
+    if (false === $stmt) {
+        echo mysqli_error($conn);
+    } else {
+        mysqli_stmt_bind_param(
+            $stmt,
+            "ssssssis",
+            $_POST['person_vorname'],
+            $_POST['person_nachname'],
+            $_POST['book_title'],
+            $_POST['book_published_at'],
+            $_POST['book_content'],
+            $_POST['person_strasse_und_hausnummer'],
+            $_POST['person_plz'],
+            $_POST['person_geschlecht']
+        );
 
-            if (mysqli_stmt_execute($stmt)) {
-                $id = mysqli_insert_id($conn);
-                redirectAndExit("/model/formular.php?id=$id");
-            } else {
-                echo mysqli_stmt_error($stmt);
-            }
+        if (mysqli_stmt_execute($stmt)) {
+            $id = mysqli_insert_id($conn);
+            redirectAndExit("/model/formular.php?id=$id");
+        } else {
+            echo mysqli_stmt_error($stmt);
         }
     }
-    ?>
+}
+require '../view/header.php';
+?>
 
     <!DOCTYPE html>
 

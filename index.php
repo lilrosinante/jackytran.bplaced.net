@@ -25,6 +25,10 @@
         <br/>
         <input type="submit" value="Log in"/>
         <p>No account? Click <a href="/view/registration-form.php">here</a> to register</p>
+        <?php if (isset($error)) { ?>
+        <br>
+        <h4 id="wrongCredentials"><?php echo $error ?></h4>
+        <?php } ?>
         <br>
         <br>
         <br>

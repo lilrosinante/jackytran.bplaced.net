@@ -9,10 +9,10 @@ $name = $_POST['benutzer'];
 $pass = $_POST['password'];
 
 //Query um die Daten herauszunehmen
-$s = "select * from user where name='$name' && password = '$pass'";
+$sql = "select * from user where name='$name' && password = '$pass'";
 
 //Die Daten, die man erhält
-$result = mysqli_query($conn, $s);
+$result = mysqli_query($conn, $sql);
 
 $num = mysqli_num_rows($result);
 
@@ -23,7 +23,9 @@ if ($num == 1) {
     header('location:/model/booklist.php');
     $_SESSION['logged_in'] = true;
 } else {
-    echo "Your login credentials might be wrong.";
+    $error = "Your login credentials might be wrong.";
 }
 
 include('../index.php');
+
+?>
