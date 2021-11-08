@@ -10,7 +10,7 @@
 
 <body>
 <header>
-    <h2 id="head">Skør Book Office 🧾</h2>
+    <h2 id="head">Jacky's Book Office 🧾</h2>
 </header>
 
 <img src="/view/img/bookshelf.jpg" alt="first" width="1904">

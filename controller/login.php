@@ -1,6 +1,5 @@
 <?php
 
-include('../index.php');
 include '../model/getdbconnection.php';
 
 $conn = getMyDbConnection();
@@ -27,3 +26,4 @@ if ($num == 1) {
     echo "Your login credentials might be wrong.";
 }
 
+include('../index.php');
